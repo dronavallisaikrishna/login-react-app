@@ -2,6 +2,8 @@ This is a react application which explains the various types of loging in to an 
 This application is set up using react.
 This doesnot contain any redux in it. 
 
+[](public/signup.jpeg)
+
 **Running the application:-**
 1. Run the backend of the application which is available here.
 2. Change the values in the src/constannts/index.js values based on the URL where your backend server is running. If working on local it is not required.
