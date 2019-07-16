@@ -42,6 +42,22 @@ export function login(loginRequest) {
     });
 }
 
+export function getOTP(otpRequest) {
+    return request({
+        url: API_BASE_URL + "/auth/login-with-otp",
+        method: 'POST',
+        body: JSON.stringify(otpRequest)
+    });
+}
+
+export function validateOTP(vallidateOtpRequest) {
+    return request({
+        url: API_BASE_URL + "/auth/validate-otp",
+        method: 'POST',
+        body: JSON.stringify(vallidateOtpRequest)
+    });
+}
+
 export function signup(signupRequest) {
     return request({
         url: API_BASE_URL + "/auth/signup",

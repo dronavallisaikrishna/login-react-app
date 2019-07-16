@@ -41,7 +41,12 @@ class Login extends Component {
                         <span className="or-text">OR</span>
                     </div>
                     <LoginForm {...this.props} />
-                    <span className="signup-link">New user? <Link to="/signup">Sign up!</Link></span>
+                    <div>
+                        <span className="signup-link">New user? <Link to="/signup">Sign up!</Link></span>
+                    </div>
+                    <div>
+                        <span className="signup-link">login with otp <Link to="/login-with-otp">Login with OTP</Link></span>
+                    </div>
                 </div>
             </div>
         );

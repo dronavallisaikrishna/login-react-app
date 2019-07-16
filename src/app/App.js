@@ -8,6 +8,7 @@ import Home from '../home/Home';
 import Login from '../user/login/Login';
 import Signup from '../user/signup/Signup';
 import Profile from '../user/profile/Profile';
+import LoginWithOTP from "../user/login-with-otp/LoginWithOTP";
 import OAuth2RedirectHandler from '../user/oauth2/OAuth2RedirectHandler';
 import NotFound from '../common/NotFound';
 import LoadingIndicator from '../common/LoadingIndicator';
@@ -77,7 +78,8 @@ class App extends Component {
                 </div>
                 <div className="app-body">
                     <Switch>
-                        <Route exact path="/" component={Home}></Route>
+                        <Route exact path="/" component={Home} authenticated={this.state.authenticated} currentUser={this.state.currentUser}></Route>
+                        <Route path="/login-with-otp" component={LoginWithOTP} ></Route>
                         <PrivateRoute path="/profile" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
                             component={Profile}></PrivateRoute>
                         <Route path="/login"
@@ -91,7 +93,7 @@ class App extends Component {
                 <Alert stack={{ limit: 3 }}
                     timeout={3000}
                     position='top-right' effect='slide' offset={65} />
-            </div>
+            </div >
         );
     }
 }
